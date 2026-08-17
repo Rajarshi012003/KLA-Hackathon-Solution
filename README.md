@@ -278,8 +278,8 @@ Training can be resumed from a snapshot with `--resume <path/to/checkpoint_last.
 Our model was evaluated on a **held-out validation split** to prevent training leakage. We
 tracked the three mandatory metrics used by KLA:
 
-- **PSNR:** ~26.90 dB
-- **SSIM:** ~0.665
+- **PSNR:** ~26.97 dB
+- **SSIM:** ~0.676
 - **LPIPS:** ~0.082
 
 | Item | Value |
