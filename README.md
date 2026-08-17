@@ -1,5 +1,5 @@
 # KLA-Hackathon-Solution
-### AI-Based Restoration of Degraded Images for Semiconductor Inspection
+## AI-Based Restoration of Degraded Images for Semiconductor Inspection
 
 **Hackathon 2026 — Organized as part of SEMICON India**
 **Problem Statement:** KLA — *AI-Based Restoration of Degraded Images for Semiconductor Inspection*
