@@ -1,20 +1,3 @@
-"""
-train.py
-========
-1. AdamW optimizer + CosineAnnealingLR scheduler.
-2. Automatic Mixed Precision (AMP) via ``torch.amp.autocast('cuda')`` and
-   ``torch.cuda.amp.GradScaler()`` (T4/half-precision, speed).
-3. ``clip_grad_norm_`` BEFORE the optimizer step (unbounded speckle spikes).
-4. CRITICAL clamping rule: training loss on RAW (unclamped) output so gradients
-   flow freely; in the ``torch.no_grad()`` VALIDATION loop we clamp
-   ``out = torch.clamp(out, 0.0, 1.0)`` before computing PSNR/SSIM.
-5. Epoch-averaged PSNR/SSIM; save ``best_model.pt`` ONLY when
-   ``score = PSNR + SSIM * 100`` improves.
-
-Run:
-    python train.py --epochs 100 --batch_size 32 --lr 1e-4 \
-        --lr_dir train/train/NoisyLR --gt_dir train/train/GT
-"""
 from __future__ import annotations
 
 import argparse
